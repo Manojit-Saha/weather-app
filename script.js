@@ -20,7 +20,7 @@ async function checkWeather(city) {
         if (weather_data.cod === '404') {
             location_not_found.style.display = 'flex';
             weather_body.style.display = 'none';
-            weather_img.src = "/images/error.png"; // Display error icon
+            weather_img.src = "./images/error.png"; // Display error icon
             console.error('Location not found');
             return;
         }
@@ -62,19 +62,19 @@ async function checkWeather(city) {
 
         switch (weather_data.weather[0].main) {
             case 'Clouds':
-                weather_img.src = "/images/cloud.png";
+                weather_img.src = "./images/cloud.png";
                 break;
             case 'Clear':
-                weather_img.src = "/images/clear.png";
+                weather_img.src = "./images/clear.png";
                 break;
             case 'Rain':
-                weather_img.src = "/images/rain.png";
+                weather_img.src = "./images/rain.png";
                 break;
             case 'Mist':
-                weather_img.src = "/images/mist.png";
+                weather_img.src = "./images/mist.png";
                 break;
             case 'Snow':
-                weather_img.src = "/images/snow.png";
+                weather_img.src = "./images/snow.png";
                 break;
         }
 
